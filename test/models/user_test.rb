@@ -60,7 +60,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "password should be present (nonblank)" do
-    @user.password = @user.password_confirmation = " "
+    @user.password = @user.password_confirmation = " " * 5
     assert_not @user.valid?
   end
   
